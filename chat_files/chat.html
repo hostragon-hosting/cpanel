@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hostragon Live Chat</title>
+	<!-- Start of Async Drift Code -->
+	<script>
+	!function() {
+	  var t;
+	  if (t = window.driftt = window.drift = window.driftt || [], !t.init) return t.invoked ? void (window.console && console.error && console.error("Drift snippet included twice.")) : (t.invoked = !0, 
+	  t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ], 
+	  t.factory = function(e) {
+	    return function() {
+	      var n;
+	      return n = Array.prototype.slice.call(arguments), n.unshift(e), t.push(n), t;
+	    };
+	  }, t.methods.forEach(function(e) {
+	    t[e] = t.factory(e);
+	  }), t.load = function(t) {
+	    var e, n, o, i;
+	    e = 3e5, i = Math.ceil(new Date() / e) * e, o = document.createElement("script"), 
+	    o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + i + "/" + t + ".js", 
+	    n = document.getElementsByTagName("script")[0], n.parentNode.insertBefore(o, n);
+	  });
+	}();
+	drift.SNIPPET_VERSION = '0.3.1';
+	drift.load('4s2um5kavu4a');
+	</script>
+	<!-- End of Async Drift Code -->
+
+	<!-- place this script tag after the Drift embed tag -->
+	<script>
+	  (function() {
+	    /* Add this class to any elements you want to use to open Drift.
+	     *
+	     * Examples:
+	     * - <a class="drift-open-chat">Questions? We're here to help!</a>
+	     * - <button class="drift-open-chat">Chat now!</button>
+	     *
+	     * You can have any additional classes on those elements that you
+	     * would ilke.
+	     */
+	    var DRIFT_CHAT_SELECTOR = '.drift-open-chat'
+	    /* http://youmightnotneedjquery.com/#ready */
+	    function ready(fn) {
+	      if (document.readyState != 'loading') {
+	        fn();
+	      } else if (document.addEventListener) {
+	        document.addEventListener('DOMContentLoaded', fn);
+	      } else {
+	        document.attachEvent('onreadystatechange', function() {
+	          if (document.readyState != 'loading')
+	            fn();
+	        });
+	      }
+	    }
+	    /* http://youmightnotneedjquery.com/#each */
+	    function forEachElement(selector, fn) {
+	      var elements = document.querySelectorAll(selector);
+	      for (var i = 0; i < elements.length; i++)
+	        fn(elements[i], i);
+	    }
+	    function openSidebar(driftApi, event) {
+	      event.preventDefault();
+	      driftApi.sidebar.open();
+	      return false;
+	    }
+	    ready(function() {
+	      drift.on('ready', function(api) {
+	        var handleClick = openSidebar.bind(this, api)
+	        forEachElement(DRIFT_CHAT_SELECTOR, function(el) {
+	          el.addEventListener('click', handleClick);
+	        });
+	      });
+	    });
+	  })();
+	</script>
+	<style>
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+* { box-sizing: border-box; }
+
+body { 
+  font-family: 'Open Sans', sans-serif;
+  color: #666;
+}
+
+/* STRUCTURE */
+
+.wrapper {
+	padding: 5px;
+	max-width: 960px;
+	width: 95%;
+	margin: 20px auto;
+}
+header {
+	padding: 0 15px;
+}
+
+.columns {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	margin: 5px 0;
+}
+
+.column {
+	flex: 1;
+	border: 1px solid gray;
+	margin: 2px;
+	padding: 10px;
+	&:first-child { margin-left: 0; }
+	&:last-child { margin-right: 0; }
+	
+}
+
+footer {
+	padding: 0 15px;
+}
+
+
+@media screen and (max-width: 980px) {
+  .columns .column {
+		margin-bottom: 5px;
+    flex-basis: 40%;
+		&:nth-last-child(2) {
+			margin-right: 0;
+		}
+		&:last-child {
+			flex-basis: 100%;
+			margin: 0;
+		}
+	}
+}
+
+@media screen and (max-width: 680px) {
+	.columns .column {
+		flex-basis: 100%;
+		margin: 0 0 5px 0;
+	}
+}
+	</style>
+
+</head>
+<body>
+<div class="wrapper">
+
+	<header>
+		<h1>3 Hosting Support Options</h1>
+	</header>
+		
+<section class="columns">
+	
+	<div class="column">
+		<h2>Submit A Ticket</h2>
+		<p>When it comes to technical support, there are issues we cannot dealt with over live chat. In that case, the best option has been and will alway be to submit a ticket by selecting the appropriate department from <a href="https://hostragon.com/submitticket.php">this page</a>.</p>
+	</div>
+	
+	<div class="column">
+		<h2>cPanel Video Tutorials</h2>
+		<p>Beyond the <a href="https://hostragon.com/knowledgebase.php">documentation</a> that you at your billing portal, we provide step-by-step and easy to use cPanel tutorial and other tutorials including WordPress, Drupal, etc in audio, video and text format at <a href="https://tutorials.hostragon.com/">our hosting portal</a>.</p>
+	</div>
+  
+  <div class="column">
+		<h2>External Support Desk</h2>
+		<p>When we are upgrading our billing system or when it is going for a failover, it might be off for 3-5 minutes. If you need immediate help or support, please use <a href="https://hostragon.zendesk.com/hc/en-us">our Zendesk support portal</a> to submit a request for assistance.</p>
+	</div>
+	
+</section>	
+	
+	<footer>
+		<h3>About Hostragon</h3>
+		<p>Hostragon is an Atlanta-based web hosting company built to give you the highest performing, best-in-class cPanel and WordPress hosting infrastructure available. We provide shared hosting service, managed hosting services, cloud hosting, VPS & dedicated server hosting with cPanel control panel to SMBs, web design agencies, bloggers, professionals & corporate entities.</p>
+	</footer>
+
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
